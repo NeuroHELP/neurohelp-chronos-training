@@ -11,9 +11,10 @@ readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.9"
 dependencies = [
-    "torch>=2.0,<2.6",         # package was tested on 2.2
+    "torch>=2.0,<2.6", # package was tested on 2.2
     "transformers>=4.30,<4.48",
     "accelerate>=0.32,<1",
+    "typer-config>=1.4.2",
 ]
 classifiers = [
     "Programming Language :: Python :: 3",
@@ -42,3 +43,14 @@ Paper = "https://arxiv.org/abs/2403.07815"
 
 [tool.mypy]
 ignore_missing_imports = true
+
+[dependency-groups]
+dev = [
+    "autogluon>=1.2",
+    "ipykernel>=6.29.5",
+    "matplotlib>=3.9.4",
+    "pandas>=2.2.3",
+    "pillow>=11.0.0",
+    "pip>=24.3.1",
+    "webdataset>=0.2.100",
+]
